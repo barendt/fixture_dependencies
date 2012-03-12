@@ -1,4 +1,4 @@
-class Spec::Example::ExampleGroup
+class RSpec::Core::Example::ExampleGroup
   def execute(*args, &block)
     x = nil
     Sequel::Model.db.transaction{x = super(*args, &block); raise Sequel::Error::Rollback}
